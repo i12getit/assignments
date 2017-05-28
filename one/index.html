@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='ass1app'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <title>My first assignment</title>
+  </head>
+  <body>
+    <h1>Food counter</h1>
+    <h2>What did you eat today?</h2>
+    <div ng-controller="ass1controller">
+      <input type="text"
+        name="Enter food list"
+        ng-model="textboxdata"
+        ng-Focus="afterclick()">
+
+      <button ng-click="calcFood()">Calc food</button>
+      <div ng-if = "calcDone == true">
+        <h2 ng-if="count > 3">Too much food my friend!</h2>
+        <h2 ng-if="count <= 3 && count > 0">You're OK my friend!</h2>
+        <h2 ng-if="count == 0">Please input data</h2>
+      </div>
+    </div>
+  </body>
+</html>
