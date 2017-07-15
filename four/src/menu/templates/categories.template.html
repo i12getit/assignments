@@ -1,0 +1,9 @@
+<h1>categoryList</h1>
+<ul>
+  <li ng-repeat="category in mainCtrl.categories">
+    <a ui-sref="categoryList.items({shortName: category.short_name})"> {{ category.name }} </a>
+    <div ng-if="category.short_name == mainCtrl.getSelectedCategory()">
+      <ui-view></ui-view>
+    </div>
+  </li>
+</ul>

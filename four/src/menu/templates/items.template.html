@@ -1,0 +1,4 @@
+<div ng-repeat="item in ItemsCtrl.items">
+  <a ui-sref="categoryList.items.description({itemId:$index})">{{ item.name }}</a>
+  <ui-view></ui-view>
+</div>
